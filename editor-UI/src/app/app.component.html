@@ -1,0 +1,83 @@
+<!-- <h1>hello world</h1> -->
+<!-- <dx-button
+    text="Click me"
+    (onClick)="helloWorld()">
+</dx-button> -->
+
+<div class="form1">
+<form action="your-action" (submit)="onFormSubmit($event)">
+    <div class="dx-fieldset">
+        <div class="dx-field">
+            <div class="dx-field-label">Page Name</div>
+            <div class="dx-field-value">
+                <dx-select-box [dataSource]="pagelList" [value]="pageName"  dataField="pageName" (onValueChanged)="onValueChanged($event)"> 
+                    <dx-validator>
+                        <dxi-validation-rule type="required" message="Page Name is required"></dxi-validation-rule>
+                    </dx-validator>
+                </dx-select-box>
+            </div>
+        </div>
+        <div class="dx-field">
+            <div class="dx-field-label">Control Name</div>
+            <div class="dx-field-value">
+                <dx-text-box  name="controlNames"   [(ngModel)]="controlNme" >
+                    <dx-validator>
+                        <dxi-validation-rule type="required" message="Control Name  is required"></dxi-validation-rule>
+                        <dxi-validation-rule type="stringLength" [min]="2" message="control Name must have at least 2 symbols"></dxi-validation-rule>
+                    </dx-validator>
+                </dx-text-box>
+            </div>
+        </div>
+        </div>
+          
+<dx-html-editor height="350px"  name="editor"  [(ngModel)]="editorValueType" (valueChange)="richTChange($event)">>
+    <dxo-toolbar [multiline]="isMultiline">
+        <dxi-item formatName="undo"></dxi-item>
+        <dxi-item formatName="redo"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="size" [formatValues]="['8pt', '10pt', '12pt', '14pt', '18pt', '24pt', '36pt']"></dxi-item>
+        <dxi-item formatName="font" [formatValues]="['Arial', 'Courier New', 'Georgia', 'Impact', 'Lucida Console', 'Tahoma', 'Times New Roman', 'Verdana']"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="bold"></dxi-item>
+        <dxi-item formatName="italic"></dxi-item>
+        <dxi-item formatName="strike"></dxi-item>
+        <dxi-item formatName="underline"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="alignLeft"></dxi-item>
+        <dxi-item formatName="alignCenter"></dxi-item>
+        <dxi-item formatName="alignRight"></dxi-item>
+        <dxi-item formatName="alignJustify"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="orderedList"></dxi-item>
+        <dxi-item formatName="bulletList"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="header" [formatValues]="[false, 1, 2, 3, 4, 5]"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="color"></dxi-item>
+        <dxi-item formatName="background"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="link"></dxi-item>
+        <dxi-item formatName="image"></dxi-item>
+        <dxi-item formatName="separator"></dxi-item>
+        <dxi-item formatName="clear"></dxi-item>
+        <dxi-item formatName="codeBlock"></dxi-item>
+        <dxi-item formatName="blockquote"></dxi-item>
+    </dxo-toolbar>
+    <dxo-media-resizing
+        [enabled]=true>
+    </dxo-media-resizing>
+  </dx-html-editor>
+  
+
+        <div class="dx-fieldset">
+            <dx-validation-summary id="summary"></dx-validation-summary>
+    
+            <dx-button 
+                id="button"
+                text="Register"
+                type="success"  
+                [useSubmitBehavior]="true">
+            </dx-button>
+        </div>
+        </form>
+    </div>

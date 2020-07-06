@@ -1,0 +1,33 @@
+::ng-deep .dx-htmleditor-content img {
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+::ng-deep .options {
+    padding: 20px;
+    background-color: rgba(191, 191, 191, 0.15);
+    margin-top: 20px;
+}
+
+::ng-deep .caption {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+::ng-deep .option {
+    margin-top: 10px;
+}
+.form1{
+width: 50%;
+height: 50%;
+position: relative;
+left: 25%;
+top:30%;
+transform: translate( -50px ,6px);
+}
+dx-button {
+    margin: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate( -50% ,5%);
+}
