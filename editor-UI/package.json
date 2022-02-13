@@ -42,7 +42,7 @@
     "@ng-idle/keepalive": "^8.0.0-beta.4",
     "@ng-select/ng-select": "^3.0.6",
     "@swimlane/ngx-charts": "^13.0.2",
-    "ajv": "6.10.0",
+    "ajv": "6.12.3",
     "angular-gridster2": "^8.3.0",
     "angular2-toaster": "^8.0.0",
     "angular2-uuid": "^1.1.1",
